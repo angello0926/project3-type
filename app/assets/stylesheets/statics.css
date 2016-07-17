@@ -1,0 +1,20 @@
+.btn{
+   font-size: 25px;
+   background-color:#1C907F;
+   color: white;
+   margin: 40px;
+   width:200px;
+}
+.logo{
+  font-size: 100px;
+  color:#1C907F;
+  margin:10px;
+}
+.welcome{
+  margin-top: 100px;
+}
+
+.btn:hover{
+  background-color:#FFCF04;
+  color:white;
+}
