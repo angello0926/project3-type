@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
-  //$('.welcome').hide();
+  $('.signup-detail').hide();
+  $('.header').hide();
+
 
   $('#login').click(function(e){
     e.preventDefault();
@@ -13,7 +15,8 @@ $(document).ready(function() {
       }).then(function(user){
          $('#login-modal').modal('hide');
          $('.welcome').hide();
-         console.log(current_user);
+         $('.header').show();
+         console.log(user);
       }).fail(function(resp){
          console.log(resp)
       });
@@ -32,6 +35,8 @@ $(document).ready(function() {
       }).then(function(user){
          $('#signup-modal').modal('hide');
           $('.welcome').hide();
+          $('.header').show();
+          $('.signup-detail').show();
       }).fail(function(resp){
         console.log(resp);
       });
@@ -41,6 +46,10 @@ $(document).ready(function() {
   $('#logout').on('click', function(){
     $.auth.signOut();
     console.log('logout');
+    $('.signup-detail').hide();
+    $('.header').hide();
+    $('.welcome').show();
+
   });
 
   $('.submit-details').on('click', function(){
