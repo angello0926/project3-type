@@ -1,3 +1,16 @@
-<a href="/login">login</a>
-<a href="/signup">Signup</a>
-<a href="#" id='logout'>Logout</a>
+<%= render 'partials/header' %>
+
+
+<div class="row welcome">
+
+<div class="col-md-4 col-md-offset-4 logo">TYPE |</div>
+
+<div class="col-md-4 col-md-offset-4"><button class='btn' id="login">Log in</button></div>
+<div class="col-md-4 col-md-offset-4"><button class="btn" id="signup">Get Started</button></div>
+</div>
+
+
+<%= render 'partials/signupdetails' %>
+<%= render 'partials/signup_modal' %>
+<%= render 'partials/login_modal' %>
+

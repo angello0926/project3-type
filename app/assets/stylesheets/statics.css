@@ -1,0 +1,68 @@
+.btn{
+   font-size: 25px;
+   background-color:#1C907F;
+   color: white;
+   margin:40px;
+   width:200px;
+}
+
+.logo{
+  font-size: 100px;
+  color:#1C907F;
+  margin:10px;
+}
+.welcome{
+  margin-top: 100px;
+}
+
+.btn:hover{
+  background-color:#FFCF04;
+  color:white;
+}
+
+
+.icon{
+  width:50%;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.header_icon{
+  margin-top: 10px;
+  margin-right: 10px;
+  color:#1C907F;
+  font-size: 25px;
+
+}
+
+.blanks{
+  margin-bottom: 10px;
+}
+
+.form-control{
+  background-color: #cddad8;
+  color:white;
+}
+
+.signup-detail{
+   border-top: 10px solid #1C907F;
+   border-left: 1px solid #cddad8;
+   border-right: 1px solid #cddad8;
+   border-bottom: 1px solid #cddad8;
+   margin-top: 50px;
+}
+
+.instruction{
+ padding-left: 15px;
+ color: #1C907F;
+ font-size: 20px;
+}
+
+.radio-inline{
+  color:grey;
+}
+
+label{
+  color:#1C907F;
+}
+
