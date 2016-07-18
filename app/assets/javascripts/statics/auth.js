@@ -1,8 +1,24 @@
 $(document).ready(function() {
 
-  $('.signup-detail').hide();
-  $('.header').hide();
+  function setWelcomePage(){
+    $('.signup-detail').hide();
+    $('.header').hide();
+    $('.welcome').show();
+  }
 
+  setWelcomePage();
+  function setSignupdetails(){
+    $('#signup-modal').modal('hide');
+    $('.welcome').hide();
+    $('.header').show();
+    $('.signup-detail').show();
+  }
+
+  function afterLoggedIn(){
+     $('#login-modal').modal('hide');
+     $('.welcome').hide();
+     $('.header').show();
+  }
 
   $('#login').click(function(e){
     e.preventDefault();
@@ -13,9 +29,7 @@ $(document).ready(function() {
         email: $('#login-modal #login-form input[name="email"]').val(),
         password: $('#login-modal #login-form input[name="password"]').val()
       }).then(function(user){
-         $('#login-modal').modal('hide');
-         $('.welcome').hide();
-         $('.header').show();
+         afterLoggedIn();
          console.log(user);
       }).fail(function(resp){
          console.log(resp)
@@ -33,10 +47,7 @@ $(document).ready(function() {
         password: $('#signup-modal #signup-form input[name="password"]').val(),
         password_confirmation: $('#signup-modal #signup-form input[name="password_confirmation"]').val()
       }).then(function(user){
-         $('#signup-modal').modal('hide');
-          $('.welcome').hide();
-          $('.header').show();
-          $('.signup-detail').show();
+         setSignupdetails();
       }).fail(function(resp){
         console.log(resp);
       });
@@ -46,10 +57,7 @@ $(document).ready(function() {
   $('#logout').on('click', function(){
     $.auth.signOut();
     console.log('logout');
-    $('.signup-detail').hide();
-    $('.header').hide();
-    $('.welcome').show();
-
+    setWelcomePage();
   });
 
   $('.submit-details').on('click', function(){
@@ -97,11 +105,10 @@ $(document).ready(function() {
     console.log(numberType);
       // ---------------->calculate numberology
 
+    //------->calculate horoscopes
     var zodiacSign='';
     var month=parseInt(monthStr);
     var day=parseInt(dayStr);
-
-    //------->calculate horoscopes
     if((month == 1 && day <= 20) || (month == 12 && day >=22)) {
        zodiacSign='Capricorn';
      } else if ((month == 1 && day >= 21) || (month == 2 && day <= 18)) {
@@ -129,6 +136,20 @@ $(document).ready(function() {
      }
 
      console.log(zodiacSign);
+
+     // $.ajax({
+     //    url: '/posts',
+     //    method: 'post',
+     //    data: params,
+     //    success: function (post) {
+     //      ajaxPosts.getPosts();
+     //      cb(post, "edit");
+     //    },
+     //    error: function (resp) {
+     //    console.log(resp);
+     //    }
+     //  });
+
   });
 });
 
