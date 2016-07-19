@@ -1,9 +1,31 @@
 $(document).ready(function() {
 
-  $('.signup-detail').hide();
-  $('.header').hide();
-  $('.welcome').hide();
-  $('.header').show();
+  function setWelcomePage(){
+    $('.signup-detail').hide();
+    $('.header').hide();
+    $('.welcome').show();
+  }
+
+
+  function setSignupdetails(){
+    $('#signup-modal').modal('hide');
+    $('.welcome').hide();
+    $('.header').show();
+    $('.signup-detail').show();
+  }
+
+  function afterLoggedIn(){
+     $('#login-modal').modal('hide');
+     $('.welcome').hide();
+     $('.header').show();
+     $('.signup-detail').hide();
+  }
+
+  if ($.auth.user.signedIn){
+     afterLoggedIn();
+  }else{
+    setWelcomePage();
+  }
 
   $('#login').click(function(e){
     e.preventDefault();
@@ -14,9 +36,7 @@ $(document).ready(function() {
         email: $('#login-modal #login-form input[name="email"]').val(),
         password: $('#login-modal #login-form input[name="password"]').val()
       }).then(function(user){
-         $('#login-modal').modal('hide');
-         $('.welcome').hide();
-         $('.header').show();
+         afterLoggedIn();
          console.log(user);
       }).fail(function(resp){
          console.log(resp)
@@ -34,10 +54,7 @@ $(document).ready(function() {
         password: $('#signup-modal #signup-form input[name="password"]').val(),
         password_confirmation: $('#signup-modal #signup-form input[name="password_confirmation"]').val()
       }).then(function(user){
-         $('#signup-modal').modal('hide');
-          $('.welcome').hide();
-          $('.header').show();
-          $('.signup-detail').show();
+         setSignupdetails();
       }).fail(function(resp){
         console.log(resp);
       });
@@ -47,10 +64,7 @@ $(document).ready(function() {
   $('#logout').on('click', function(){
     $.auth.signOut();
     console.log('logout');
-    $('.signup-detail').hide();
-    $('.header').hide();
-    $('.welcome').show();
-
+    setWelcomePage();
   });
 
   $('.submit-details').on('click', function(){
@@ -98,39 +112,54 @@ $(document).ready(function() {
     console.log(numberType);
       // ---------------->calculate numberology
 
+    //------->calculate horoscopes
     var zodiacSign='';
     var month=parseInt(monthStr);
     var day=parseInt(dayStr);
-
-    //------->calculate horoscopes
     if((month == 1 && day <= 20) || (month == 12 && day >=22)) {
-       zodiacSign='Capricorn';
+       zodiacSign='1'; //Capricorn
      } else if ((month == 1 && day >= 21) || (month == 2 && day <= 18)) {
-       zodiacSign='Aquarius';
+       zodiacSign='4'; //Aquarius
      } else if((month == 2 && day >= 19) || (month == 3 && day <= 20)) {
-       zodiacSign='Pisces';
+       zodiacSign='7'; //Pisces
      } else if((month == 3 && day >= 21) || (month == 4 && day <= 20)) {
-       zodiacSign='Aries';
+       zodiacSign='10'; //Aries
      } else if((month == 4 && day >= 21) || (month == 5 && day <= 20)) {
-       zodiacSign='Taurus';
+       zodiacSign='2';//Taurus
      } else if((month == 5 && day >= 21) || (month == 6 && day <= 20)) {
-       zodiacSign='Gemini';
+       zodiacSign='5'; //Gemini
      } else if((month == 6 && day >= 22) || (month == 7 && day <= 22)) {
-       zodiacSign='Cancer';
+       zodiacSign='8'; //Cancer
      } else if((month == 7 && day >= 23) || (month == 8 && day <= 23)) {
-       zodiacSign='Leo';
+       zodiacSign='11'; //Leo
      } else if((month == 8 && day >= 24) || (month == 9 && day <= 23)) {
-       zodiacSign='Virgo';
+       zodiacSign='3'; //Virgo
      } else if((month == 9 && day >= 24) || (month == 10 && day <= 23)) {
-       zodiacSign='Libra';
+       zodiacSign='6'; //Libra
      } else if((month == 10 && day >= 24) || (month == 11 && day <= 22)) {
-       zodiacSign='Scorpio';
+       zodiacSign='9'; //Scorpio
      } else if((month == 11 && day >= 23) || (month == 12 && day <= 21)) {
-       zodiacSign='Sagittarius';
+       zodiacSign='12'; //Sagittarius
      }
 
      console.log(zodiacSign);
-  });
+
+     $.auth.updateAccount({
+       name: $('#username').val(),
+       birth_dd: day,
+       birth_mm: month,
+       birth_yy: parseInt(yearStr),
+       gender: $('input[name=gender]:checked').val(),
+       numerology_id: numberType,
+       horoscope_id: zodiacSign
+     });
+
+     console.log($.auth.user);
+     afterLoggedIn();
+
+
+});
+
 });
 
 

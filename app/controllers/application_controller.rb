@@ -1,10 +1,10 @@
 class ApplicationController < ActionController::Base
   include DeviseTokenAuth::Concerns::SetUserByToken
-
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :null_session
 
+  before_action :configure_permitted_params, if: :devise_controller?
   before_action :get_current_user
 
   def authenticate_user!
@@ -25,5 +25,11 @@ class ApplicationController < ActionController::Base
       @current_user = current_user
     end
     @current_user
+  end
+
+  protected
+
+  def configure_permitted_params
+    devise_parameter_sanitizer.permit(:account_update, keys: [:birth_mm, :birth_dd, :birth_yy, :gender, :name, :horoscope_id, :numerology_id])
   end
 end

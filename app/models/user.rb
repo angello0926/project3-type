@@ -4,4 +4,9 @@ class User < ActiveRecord::Base
           :recoverable, :rememberable, :trackable, :validatable,
           :omniauthable
   include DeviseTokenAuth::Concerns::User
+
+belongs_to :numerology
+belongs_to :mbti
+belongs_to :horoscope
+
 end
