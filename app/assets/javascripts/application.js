@@ -16,6 +16,7 @@
 //= require jquery-deparam/jquery-deparam
 //= require jquery-cookie/jquery.cookie
 //= require pubsub-js/src/pubsub
+//= require private_pub
 //= require chat
 //= require j-toker/dist/jquery.j-toker
 //= require bootstrap/dist/js/bootstrap
