@@ -23,6 +23,7 @@ $("#mbti").autocomplete({
         var results = $.ui.autocomplete.filter(mbti, request.term);
 
         response(results.slice(0, 16));
+        console.log(results);
     }
 });
 
