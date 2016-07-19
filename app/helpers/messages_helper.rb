@@ -1,18 +1,10 @@
-class MessagesController < ApplicationController
-  before_filter :authenticate_user!
+module MessagesHelper
 
-  def create
-    @conversation = Conversation.find(params[:conversation_id])
-    @message = @conversation.messages.build(message_params)
-    @message.user_id = current_user.id
-    @message.save!
-
-    @path = conversation_path(@conversation)
+  def self_or_other(message)
+    message.user == current_user ? "self" : "other"
   end
 
-  private
-
-  def message_params
-    params.require(:message).permit(:body)
+  def message_interlocutor(message)
+    message.user == message.conversation.sender ? message.conversation.sender : message.conversation.recipient
   end
 end
