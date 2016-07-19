@@ -25,6 +25,7 @@ gem 'puma'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem "private_pub"
 gem "thin"
+gem "eventmachine"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

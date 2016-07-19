@@ -147,7 +147,7 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.4)
       pry (>= 0.9.10)
-    puma (3.4.0)
+    puma (3.5.0)
     rack (1.6.4)
     rack-cors (0.4.0)
     rack-test (0.6.3)
@@ -238,6 +238,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise_token_auth
   dotenv-rails
+  eventmachine
   jbuilder (~> 2.0)
   jquery-rails
   jquery-ui-rails
