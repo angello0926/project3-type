@@ -72,3 +72,14 @@ Numerology.create(name:'7', description:'This is the deep thinker. The number se
 Numerology.create(name:'8', description:'This is the manager. Number Eight is a strong, successful, and material vibration. Ruled by Saturn.', strength:'ambitious, business-minded, practical, leading, authoritative,  successful, courageous, accomplished, organized', weakness:'tense, narrow, materialistic, forceful')
 
 Numerology.create(name:'9', description:'This is the teacher. Number Nine is a tolerant, somewhat impractical, and sympathetic vibration. Ruled by Mars.', strength:'jack of all trades, humanitarian, sympathetic, helpful, emotional,  tolerant, active, determined', weakness:'financially  careless, moody, bullying, overly emotional, sullen, restless')
+
+User.create(name: 'Lentz', mbti_id: '8', numerology_id: '7', horoscope_id: '7')
+User.create(name: 'Angel', mbti_id: '9', numerology_id: '4', horoscope_id: '4')
+User.create(name: 'Norman', mbti_id: '10', numerology_id: '3', horoscope_id: '9')
+User.create(name: 'Sherman', mbti_id: '13', numerology_id: '2', horoscope_id: '8')
+User.create(name: 'Squilliam', mbti_id: '11', numerology_id: '9', horoscope_id: '12')
+User.create(name: 'Rex', mbti_id: '15', numerology_id: '1', horoscope_id: '3')
+User.create(name: 'Will', mbti_id: '3', numerology_id: '5', horoscope_id: '8')
+User.create(name: 'Shaun', mbti_id: '12', numerology_id: '4', horoscope_id: '5')
+User.create(name: 'Keno', mbti_id: '16', numerology_id: '2', horoscope_id: '1')
+User.create(name: 'Nate', mbti_id: '7', numerology_id: '3', horoscope_id: '11')

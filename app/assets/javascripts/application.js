@@ -12,6 +12,7 @@
 //
 
 //= require jquery/dist/jquery
+//= require jquery-ui/jquery-ui
 //= require jquery-deparam/jquery-deparam
 //= require jquery-cookie/jquery.cookie
 //= require pubsub-js/src/pubsub
@@ -24,3 +25,4 @@
   // Note that if you put a '/' at the end of the link, there will be errors when calling the api
   apiUrl: 'http://localhost:3000'
 })
+

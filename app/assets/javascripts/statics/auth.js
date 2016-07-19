@@ -2,7 +2,8 @@ $(document).ready(function() {
 
   $('.signup-detail').hide();
   $('.header').hide();
-
+  $('.welcome').hide();
+  $('.header').show();
 
   $('#login').click(function(e){
     e.preventDefault();
