@@ -476,7 +476,7 @@ $(document).ready(function(){
 
   function setdescription_png(mbti){
     var description='<div class="col-md-2">'+'<img class="mbti_pic" src="/MBTI/'+mbti.name+'.png"/>'+'</div>'+'<div class="col-md-6">'+'<h2>'+mbti.name+'</h2>'+'<p>'+mbti.description+'</p>'+'</div>';
-      $('.description').html('');
+      $('.description').html('');x
       $('.description').append(description);
   }
 
