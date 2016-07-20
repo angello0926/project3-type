@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160719022934) do
+ActiveRecord::Schema.define(version: 20160719121756) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,12 @@ ActiveRecord::Schema.define(version: 20160719022934) do
     t.string   "image_URL"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string   "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "numerologies", force: :cascade do |t|
@@ -73,6 +79,8 @@ ActiveRecord::Schema.define(version: 20160719022934) do
     t.string   "mbti_id"
     t.string   "numerology_id"
     t.string   "horoscope_id"
+    t.boolean  "chat_online"
+    t.string   "chat_client_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", using: :btree
