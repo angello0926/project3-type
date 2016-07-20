@@ -21,6 +21,7 @@
 //= require j-toker/dist/jquery.j-toker
 //= require bootstrap/dist/js/bootstrap
 //= require_tree .
+//= require jquery_ujs
 
  $.auth.configure({
   // By default, you only need to configure apiUrl

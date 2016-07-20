@@ -172,23 +172,28 @@ var ready = function () {
         checkInputKey: function (event, chatboxtextarea, conversation_id) {
             if (event.keyCode == 13 && event.shiftKey == 0) {
                 event.preventDefault();
-                event.stopPropagation();
 
                 message = chatboxtextarea.val();
                 message = message.replace(/^\s+|\s+$/g, "");
 
                 if (message != '') {
-                    $.ajax({
-                        method: "POST",
-                        data: {message: {body: message}},
-                        url: '/conversations/'+conversation_id+'/messages',
-                        success:function(data){
-                            console.log(data);
-                        },
-                         error: function(xhr, error){
-                            console.debug(xhr); console.debug(error);
-                        }
-                    });
+                    $('#conversation_form_' + conversation_id).submit();
+                    // $('#conversation_form_' + conversation_id).submit(function(){
+                    //     $.ajax({
+                    //         type: "POST",
+                    //         url: 'conversations/'+ conversation_id+'/messages',
+                    //         data: JSON.stringify({
+                    //             "body": $('#message_body').chatboxtextarea,
+                    //             "conversation_id": conversation_id,
+                    //         }),
+                    //         success:function(data){
+                    //             alert(data);
+                    //         },
+                    //         error: function(data){
+                    //             console.log(data);
+                    //         }
+                    //     });
+                    // });
 
                     $(chatboxtextarea).val('');
                     $(chatboxtextarea).focus();
@@ -212,7 +217,8 @@ var ready = function () {
         },
 
         /**
-         * Responsible for handling minimize and maximize of the chatbox
+         * Responsible for handling the growth of chatboxes as they increase on the page
+         * Keeps track of the minimized chatboxes etc
          *
          * @param conversation_id
          */
