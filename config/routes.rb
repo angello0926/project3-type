@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   get '/secret', to: 'statics#secret'
   root 'statics#home'
 
+  resources :conversations do
+    resources :messages
+  end
 end
