@@ -172,12 +172,24 @@ var ready = function () {
         checkInputKey: function (event, chatboxtextarea, conversation_id) {
             if (event.keyCode == 13 && event.shiftKey == 0) {
                 event.preventDefault();
+                event.stopPropagation();
 
                 message = chatboxtextarea.val();
                 message = message.replace(/^\s+|\s+$/g, "");
 
                 if (message != '') {
-                    $('#conversation_form_' + conversation_id).submit();
+                    $.ajax({
+                        method: "POST",
+                        data: {message: {body: message}},
+                        url: '/conversations/'+conversation_id+'/messages',
+                        success:function(data){
+                            console.log(data);
+                        },
+                         error: function(xhr, error){
+                            console.debug(xhr); console.debug(error);
+                        }
+                    });
+
                     $(chatboxtextarea).val('');
                     $(chatboxtextarea).focus();
                     $(chatboxtextarea).css('height', '44px');
@@ -200,8 +212,7 @@ var ready = function () {
         },
 
         /**
-         * Responsible for handling the growth of chatboxes as they increase on the page
-         * Keeps track of the minimized chatboxes etc
+         * Responsible for handling minimize and maximize of the chatbox
          *
          * @param conversation_id
          */
