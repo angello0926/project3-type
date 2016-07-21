@@ -6,5 +6,5 @@ test:
   secret_token: "secret"
 production:
   server: "https://privatepubtype.herokuapp.com/faye"
-  secret_token: "9cb4ef446d1d06290c9c1a927741bd5df8c78b4451cab0f586a0467ba4132e29"
+  secret_token: "2e41afcd7a41f263d444c641e3e03223fed08ac54eade8455676ff818fafeeb2"
   signature_expiration: 3600 # one hour
