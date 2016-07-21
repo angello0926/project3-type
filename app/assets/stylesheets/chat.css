@@ -81,10 +81,11 @@
     align-items: flex-end;
 }
 
+
 .self .chatboxmessagecontent {
     order: 1;
     border-bottom-right-radius: 0;
-    color: white;
+    color: black;
     background-color:#FFCF04;
 
 }
@@ -107,7 +108,7 @@
 }
 
 .chatboxmessagecontent {
-    background: white;
+    background: #1C907F;
     padding: 10px;
     border-radius: 2px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -129,7 +130,7 @@
     font-family: serif;
     /* Non standard for webkit */
     word-break: break-word;
-    color: white;
+    color: black;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     hyphens: auto;
@@ -139,7 +140,7 @@
 
 .chatboxmessagecontent time {
     font-size: 9px;
-    color: black;
+    color: white;
     align: left;
     font-family: serif;
 }
