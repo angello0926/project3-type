@@ -466,8 +466,6 @@ $(document).ready(function(){
 
       }
 
-
-
     }
   });
 
