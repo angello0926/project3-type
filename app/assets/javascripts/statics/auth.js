@@ -90,7 +90,8 @@ $(document).ready(function(){
          birth_yy: parseInt(yearStr),
          gender: $('input[name=gender]:checked').val(),
          numerology_id: numberType,
-         horoscope_id: zodiacSign
+         horoscope_id: zodiacSign,
+         imgURL: "avatars/"+Math.floor((Math.random() * 50) + 1)+'.svg'
       });
        console.log($.auth.user);
        afterLoggedIn();

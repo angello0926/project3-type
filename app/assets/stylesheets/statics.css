@@ -95,3 +95,27 @@ label{
    color: white;
 }
 
+.user_pic{
+  width: 100%;
+}
+
+.eachprofile{
+  padding-left: 40px;
+  padding-top: 10px;
+}
+
+li{
+  list-style: none;
+  font-size:  12px;
+  text-align: center;
+  font-family: 'Patua One', cursive;
+}
+
+.message{
+  margin-top: 10px;
+}
+
+.name{
+   font-size:  40px;
+   text-align: center;
+}

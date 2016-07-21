@@ -5,8 +5,7 @@ class User < ActiveRecord::Base
           :omniauthable
   include DeviseTokenAuth::Concerns::User
 
-belongs_to :numerology
-belongs_to :mbti
-belongs_to :horoscope
-
+  belongs_to :numerology
+  belongs_to :mbti
+  belongs_to :horoscope
 end

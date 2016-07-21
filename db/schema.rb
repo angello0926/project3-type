@@ -11,10 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160719121756) do
+ActiveRecord::Schema.define(version: 20160721031724) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "ar_internal_metadata", primary_key: "key", force: :cascade do |t|
+    t.string   "value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "chatrooms", force: :cascade do |t|
+    t.string   "creator"
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "horoscopes", force: :cascade do |t|
     t.string   "name"
@@ -38,8 +51,10 @@ ActiveRecord::Schema.define(version: 20160719121756) do
 
   create_table "messages", force: :cascade do |t|
     t.string   "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "chatroom_id"
   end
 
   create_table "numerologies", force: :cascade do |t|
@@ -76,9 +91,10 @@ ActiveRecord::Schema.define(version: 20160719121756) do
     t.integer  "birth_mm"
     t.integer  "birth_yy"
     t.string   "gender"
-    t.string   "mbti_id"
-    t.string   "numerology_id"
-    t.string   "horoscope_id"
+    t.integer  "mbti_id"
+    t.integer  "numerology_id"
+    t.integer  "horoscope_id"
+    t.string   "imgURL"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", using: :btree

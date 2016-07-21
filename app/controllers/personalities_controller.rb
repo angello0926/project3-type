@@ -7,12 +7,15 @@ class PersonalitiesController < ApplicationController
   end
 
   def search
-    @zodiac =Horoscope.where("name=?", params[:zodiac]).first
-    @numerology =Numerology.where("name=?", params[:numerology]).first
-    @mbti = Mbti.where("name=?", params[:mbti]).first
-    @users=User.where("mbti_id = ? OR horoscope_id = ? OR numerology_id=? ",@mbti.id.to_s,@zodiac.id.to_s,@numerology.id.to_s)
-
-
-    render json: { users: @users }
+    query = "mbtis.name = ? OR horoscopes.name = ? OR numerologies.name = ?"
+    @users = User.joins(:mbti, :horoscope, :numerology).includes(:mbti, :horoscope, :numerology).where(query, params[:mbti], params[:zodiac], params[:numerology])
   end
 end
+
+# => "ENFP"
+# [10] pry(main)> Numerology.find(7).name
+#   Numerology Load (0.3ms)  SELECT  "numerologies".* FROM "numerologies" WHERE "numerologies"."id" = $1 LIMIT 1  [["id", 7]]
+# => "7"
+# [11] pry(main)> Horoscope.find(7).name
+#   Horoscope Load (0.3ms)  SELECT  "horoscopes".* FROM "horoscopes" WHERE "horoscopes"."id" = $1 LIMIT 1  [["id", 7]]
+# => "Pisces"

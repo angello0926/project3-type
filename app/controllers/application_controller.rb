@@ -30,6 +30,6 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_params
-    devise_parameter_sanitizer.permit(:account_update, keys: [:birth_mm, :birth_dd, :birth_yy, :gender, :name, :horoscope_id, :numerology_id])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:birth_mm, :birth_dd, :birth_yy, :gender, :name, :horoscope_id, :numerology_id,:imgURL])
   end
 end
