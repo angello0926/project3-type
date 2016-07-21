@@ -9,64 +9,64 @@ User.create(email: "Shaun@test.com", name: 'Shaun', mbti_id: '12', numerology_id
 User.create(email: "Keno@test.com", name: 'Keno', mbti_id: '16', numerology_id: '2', horoscope_id: '1', password: "12345678", password_confirmation: "12345678", imgURL: 'avatars/3.svg')
 User.create(email: "Nate@test.com", name: 'Nate', mbti_id: '7', numerology_id: '3', horoscope_id: '11', password: "12345678", password_confirmation: "12345678", imgURL:  'avatars/8.svg')
 
-Mbti.create(name:'INTJ', description:'Imaginative and strategic thinkers, with a plan for everything.', strength:'highly intelligent, honors commitments, independent', weakness:'unwilling to take blame, arrogant, insensitive')
+Mbti.create(name:'intj', description:'Imaginative and strategic thinkers, with a plan for everything.', strength:'highly intelligent, honors commitments, independent', weakness:'unwilling to take blame, arrogant, insensitive')
 
-Mbti.create(name:'INTP', description:'Innovative inventors with an unquenchable thirst for knowledge.', strength:'laid back, not demanding, imaginative and creative', weakness:'explosive, distrusting of others, critical of others')
+Mbti.create(name:'intp', description:'Innovative inventors with an unquenchable thirst for knowledge.', strength:'laid back, not demanding, imaginative and creative', weakness:'explosive, distrusting of others, critical of others')
 
-Mbti.create(name:'ENTJ', description:'Bold, imaginative and strong-willed leaders, always finding a way – or making one.', strength:'excellent with money, takes criticism well, goal setting', weakness:'controlling and intimidating, appears angry, impulsive')
+Mbti.create(name:'entjh', description:'Bold, imaginative and strong-willed leaders, always finding a way – or making one.', strength:'excellent with money, takes criticism well, goal setting', weakness:'controlling and intimidating, appears angry, impulsive')
 
-Mbti.create(name:'ENTP', description:'Smart and curious thinkers who cannot resist an intellectual challenge.', strength:'good communicator, laid back, generating ideas', weakness:'poor follow up skills, easily bored, argumentative')
+Mbti.create(name:'entp', description:'Smart and curious thinkers who cannot resist an intellectual challenge.', strength:'good communicator, laid back, generating ideas', weakness:'poor follow up skills, easily bored, argumentative')
 
-Mbti.create(name:'INFJ', description:'Quiet and mystical, yet very inspiring and tireless idealists.', strength:'good listener, good with communication, insightful', weakness:'trouble with conflict, can be manipulative, easily bored ')
+Mbti.create(name:'infj', description:'Quiet and mystical, yet very inspiring and tireless idealists.', strength:'good listener, good with communication, insightful', weakness:'trouble with conflict, can be manipulative, easily bored ')
 
-Mbti.create(name:'INFP', description:'Poetic, kind and altruistic people, always eager to help a good cause.', strength:'loyal, loving and caring, reading others feelings', weakness:'reacts emotionally, extreme dislike of criticism, blames themseves')
+Mbti.create(name:'infp', description:'Poetic, kind and altruistic people, always eager to help a good cause.', strength:'loyal, loving and caring, reading others feelings', weakness:'reacts emotionally, extreme dislike of criticism, blames themseves')
 
-Mbti.create(name:'ENFJ', description:'Charismatic and inspiring leaders, able to mesmerize their listeners.', strength:'communication, affectionate and loyal, honors commitments', weakness:'harbors hurt feelings, tendency to manipulate, tendency to smother')
+Mbti.create(name:'enfj', description:'Charismatic and inspiring leaders, able to mesmerize their listeners.', strength:'communication, affectionate and loyal, honors commitments', weakness:'harbors hurt feelings, tendency to manipulate, tendency to smother')
 
-Mbti.create(name:'ENFP', description:'Enthusiastic, creative and sociable free spirits, who can always find a reason to smile.', strength:'fun and optimistic, read others well, communication', weakness:'trouble with conflict, can be manipuative, easily bored')
+Mbti.create(name:'enfp', description:'Enthusiastic, creative and sociable free spirits, who can always find a reason to smile.', strength:'fun and optimistic, read others well, communication', weakness:'trouble with conflict, can be manipuative, easily bored')
 
-Mbti.create(name:'ISTJ', description:'Practical and fact-minded individuals, whose reliability cannot be doubted.', strength:' orderly and organized, handles criticism well, good listener ', weakness:'too rigid, needs to be right, not in tune with feelings')
+Mbti.create(name:'istj', description:'Practical and fact-minded individuals, whose reliability cannot be doubted.', strength:' orderly and organized, handles criticism well, good listener ', weakness:'too rigid, needs to be right, not in tune with feelings')
 
-Mbti.create(name:'ISFJ', description:'Very dedicated and warm protectors, always ready to defend their loved ones.', strength:'good listener, eager to server, great organization', weakness:'neglect own needs, dislikes change, takes criticism personally')
+Mbti.create(name:'isfj', description:'Very dedicated and warm protectors, always ready to defend their loved ones.', strength:'good listener, eager to server, great organization', weakness:'neglect own needs, dislikes change, takes criticism personally')
 
-Mbti.create(name:'ESTJ', description:'Excellent administrators, unsurpassed at managing things – or people.', strength:'loyal and committed, social and enthusiastic, born leader', weakness:'expressing feelings, can be blunt and insensitive, like to always be right')
+Mbti.create(name:'estj', description:'Excellent administrators, unsurpassed at managing things – or people.', strength:'loyal and committed, social and enthusiastic, born leader', weakness:'expressing feelings, can be blunt and insensitive, like to always be right')
 
-Mbti.create(name:'ESFJ', description:'Extraordinarily caring, social and popular people, always eager to help.', strength:'focus on others needs, money management, honors commitments', weakness:'dislikes change, takes blame for others, trouble with conflict')
+Mbti.create(name:'esfj', description:'Extraordinarily caring, social and popular people, always eager to help.', strength:'focus on others needs, money management, honors commitments', weakness:'dislikes change, takes blame for others, trouble with conflict')
 
-Mbti.create(name:'ISTP', description:'Bold and practical experimenters, masters of all kinds of tools.', strength:'self reliant, handles conflict well, efficient', weakness:'emotionally uncomfortable, long term planning')
+Mbti.create(name:'istp', description:'Bold and practical experimenters, masters of all kinds of tools.', strength:'self reliant, handles conflict well, efficient', weakness:'emotionally uncomfortable, long term planning')
 
- Mbti.create(name:'ISFP', description:'Flexible and charming artists, always ready to explore and experience something new.', strength:' loyal and committed, laid back and adaptable, good listener', weakness:'shies away from conflict, hard to get to know, withdrawn')
+ Mbti.create(name:'isfp', description:'Flexible and charming artists, always ready to explore and experience something new.', strength:' loyal and committed, laid back and adaptable, good listener', weakness:'shies away from conflict, hard to get to know, withdrawn')
 
-Mbti.create(name:'ESTP', description:'Smart, energetic and very perceptive people, who truly enjoy living on the edge.', strength:'flexible and tolerant, focus on the present, learns by doing', weakness:'easily bored, unknowingly insensitive')
+Mbti.create(name:'estp', description:'Smart, energetic and very perceptive people, who truly enjoy living on the edge.', strength:'flexible and tolerant, focus on the present, learns by doing', weakness:'easily bored, unknowingly insensitive')
 
-Mbti.create(name:'ESFP', description:'Spontaneous, energetic and enthusiastic people – life is never boring around them.', strength:'working withothers, uses common sense, adaptable', weakness:'long term commitments, does not take criticism well, takes things personally')
+Mbti.create(name:'esfp', description:'Spontaneous, energetic and enthusiastic people – life is never boring around them.', strength:'working withothers, uses common sense, adaptable', weakness:'long term commitments, does not take criticism well, takes things personally')
 
-Horoscope.create(name:'Capricorn', description:'Hardworking, straightforward, loyal, stubborn, uncontent until at the top', strength:'Responsible, good managers, disciplined, self-control, dark sense of humor.', weakness:'Know-it-all, unforgiving, condescending, expecting the worst')
+Horoscope.create(name:'capricorn', description:'Hardworking, straightforward, loyal, stubborn, uncontent until at the top', strength:'Responsible, good managers, disciplined, self-control, dark sense of humor.', weakness:'Know-it-all, unforgiving, condescending, expecting the worst')
 
-Horoscope.create(name:'Taurus', description:'Good taste, sensual, down to earth, pleasure-seeking, stubborn', strength:'Dependable, patient, musical, practical.', weakness:'Stubborn, uncompromising, possessive.')
-
-
-Horoscope.create(name:'Virgo', description:'Successful, creative, likes to please, clever, can lead others on', strength:'Practical, loyal, hardworking, analytical, kind.', weakness:'Worry, shyness, overly critical of self and others, all work and no play')
+Horoscope.create(name:'taurus', description:'Good taste, sensual, down to earth, pleasure-seeking, stubborn', strength:'Dependable, patient, musical, practical.', weakness:'Stubborn, uncompromising, possessive.')
 
 
-Horoscope.create(name:'Aquarius', description:'Sets trends, innovative, admired, distant, eccentric', strength:'Progressive, original, humanitarian, independent.', weakness:'Runs from emotional expression, uncompromising, temperamental, aloof.')
-
-Horoscope.create(name:'Gemini', description:'Dynamic, talented, likes games, two-faced, mischievous', strength:'Curiosity, ability to share ideas, adaptable, affectionate, kind.', weakness:'Scattering energy in too many places at once, fickle in love, nervous, short attention span')
-
-Horoscope.create(name:'Libra', description:'Irresistible, adventurous, lavish, indecisive, complicated love life', strength:'Social, fair-minded, cooperative, diplomatic, gracious', weakness:'Indecisive, will carry a grudge, avoids confrontations, self-pity.')
-
-Horoscope.create(name:'Pisces', description:"Alluring, free, sensual, sensitive, can't function alone", strength:'Intuitive, compassionate, artistic, gentle, wise, musical.', weakness:'Can be a victim or martyr, fearful, overly trusting, sad, desire to escape reality.')
-
-Horoscope.create(name:'Cancer', description:"Sensitive, friend-oriented, practical, hates to argue, forgives but never forget", strength:'Compassion, emotional sensitivity, fierce protection of loved ones, tenacity.', weakness:'Manipulative, indirect conflict, clinging to the past, insecure, packrat')
-
-Horoscope.create(name:'Scorpio', description:"Self reliant, powerful, wise, dominant, secretive", strength:'Passionate, stubborn, resourceful, brave, a true friend.', weakness:'Jealous, distrusting, secretive, violent, caustic')
-
-Horoscope.create(name:'Aries', description:"Brave, independent, assertive, impulsive, hates to be restricted", strength:'Courage, determination, self-confidence, enthusiasm', weakness:'Impatience, silly arguments, allowing fear to limit choices')
+Horoscope.create(name:'virgo', description:'Successful, creative, likes to please, clever, can lead others on', strength:'Practical, loyal, hardworking, analytical, kind.', weakness:'Worry, shyness, overly critical of self and others, all work and no play')
 
 
-Horoscope.create(name:'Leo', description:"Creative, popular, faithful, dominating, too much pride ", strength:'Warmth, humor, pride, joy, creativity, passion, generosity.', weakness:'Arrogance, stubbornness, inflexibility, self-centeredness, laziness')
+Horoscope.create(name:'aquarius', description:'Sets trends, innovative, admired, distant, eccentric', strength:'Progressive, original, humanitarian, independent.', weakness:'Runs from emotional expression, uncompromising, temperamental, aloof.')
 
-Horoscope.create(name:'Sagittarius', description:"Open minded, archiever, loving, insensitive, cold", strength:'Great sense of humor, idealistic, generous.', weakness:'Will say anything no matter how undiplomatic, promises more than can deliver, can be impatient to the point of rudeness.')
+Horoscope.create(name:'gemini', description:'Dynamic, talented, likes games, two-faced, mischievous', strength:'Curiosity, ability to share ideas, adaptable, affectionate, kind.', weakness:'Scattering energy in too many places at once, fickle in love, nervous, short attention span')
+
+Horoscope.create(name:'libra', description:'Irresistible, adventurous, lavish, indecisive, complicated love life', strength:'Social, fair-minded, cooperative, diplomatic, gracious', weakness:'Indecisive, will carry a grudge, avoids confrontations, self-pity.')
+
+Horoscope.create(name:'pisces', description:"Alluring, free, sensual, sensitive, can't function alone", strength:'Intuitive, compassionate, artistic, gentle, wise, musical.', weakness:'Can be a victim or martyr, fearful, overly trusting, sad, desire to escape reality.')
+
+Horoscope.create(name:'cancer', description:"Sensitive, friend-oriented, practical, hates to argue, forgives but never forget", strength:'Compassion, emotional sensitivity, fierce protection of loved ones, tenacity.', weakness:'Manipulative, indirect conflict, clinging to the past, insecure, packrat')
+
+Horoscope.create(name:'scorpio', description:"Self reliant, powerful, wise, dominant, secretive", strength:'Passionate, stubborn, resourceful, brave, a true friend.', weakness:'Jealous, distrusting, secretive, violent, caustic')
+
+Horoscope.create(name:'aries', description:"Brave, independent, assertive, impulsive, hates to be restricted", strength:'Courage, determination, self-confidence, enthusiasm', weakness:'Impatience, silly arguments, allowing fear to limit choices')
+
+
+Horoscope.create(name:'leo', description:"Creative, popular, faithful, dominating, too much pride ", strength:'Warmth, humor, pride, joy, creativity, passion, generosity.', weakness:'Arrogance, stubbornness, inflexibility, self-centeredness, laziness')
+
+Horoscope.create(name:'sagittarius', description:"Open minded, archiever, loving, insensitive, cold", strength:'Great sense of humor, idealistic, generous.', weakness:'Will say anything no matter how undiplomatic, promises more than can deliver, can be impatient to the point of rudeness.')
 
 Numerology.create(name:'1', description:' One is the leader. The number one indicates the ability to stand alone, and is a strong vibration. Ruled by the Sun.', strength:'independent, creative, original, ambitious, determined, self-assured', weakness:'arrogant, stubborn, impatient, self-centered')
 
