@@ -32,6 +32,7 @@
   margin-right: 10px;
   color:#1C907F;
   font-size: 25px;
+  margin-bottom: 30px;
 
 }
 
@@ -102,6 +103,11 @@ label{
 .eachprofile{
   padding-left: 40px;
   padding-top: 10px;
+
+}
+
+.eachuser{
+  margin-top: 10px;
 }
 
 li{

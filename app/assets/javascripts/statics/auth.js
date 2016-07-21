@@ -4,10 +4,9 @@ $(document).ready(function(){
     $('.signup-detail').hide();
     $('.header').hide();
     $('.welcome').show();
-     $('.selection').hide();
-     loginmodalshow();
-      Signup ();
-
+    $('.selection').hide();
+    loginmodalshow();
+    Signup ();
   }
 
   function setSignupdetails(){
@@ -15,16 +14,18 @@ $(document).ready(function(){
     $('.welcome').hide();
     $('.header').show();
     $('.signup-detail').show();
+    $('.selection').hide();
     submitSignupDetails();
+
   }
 
   function afterLoggedIn(){
-     $('#login-modal').modal('hide');
-     $('.welcome').hide();
-     $('.header').show();
-     $('.signup-detail').hide();
-     $('.selection').show();
-     logout();
+    $('#login-modal').modal('hide');
+    $('.welcome').hide();
+    $('.header').show();
+    $('.signup-detail').hide();
+    $('.selection').show();
+    logout();
     showPersonalityInfo();
   }
 
@@ -84,55 +85,54 @@ $(document).ready(function(){
       var day=parseInt(dayStr);
       var zodiacSign=calculateHoroscope(day,month);
       $.auth.updateAccount({
-         name: $('#username').val(),
-         birth_dd: day,
-         birth_mm: month,
-         birth_yy: parseInt(yearStr),
-         gender: $('input[name=gender]:checked').val(),
-         numerology_id: numberType,
-         horoscope_id: zodiacSign,
-         imgURL: "avatars/"+Math.floor((Math.random() * 50) + 1)+'.svg'
+        name: $('#username').val(),
+        birth_dd: day,
+        birth_mm: month,
+        birth_yy: parseInt(yearStr),
+        gender: $('input[name=gender]:checked').val(),
+        numerology_id: numberType,
+        horoscope_id: zodiacSign,
+        imgURL: "avatars/"+Math.floor((Math.random() * 50) + 1)+'.svg'
       });
-       console.log($.auth.user);
-       afterLoggedIn();
+      console.log($.auth.user);
+      afterLoggedIn();
     });
   }
 
-  function Setpage (){
+  function setpage (){
     PubSub.subscribe('auth.validation.success', function(ev, user) {
-
-       afterLoggedIn();
-      });
+      afterLoggedIn();
+    });
   }
 
   function calculateHoroscope (day,month){
     var zodiacSign='';
     if((month == 1 && day <= 20) || (month == 12 && day >=22)) {
-       zodiacSign='1'; //Capricorn
-     } else if ((month == 1 && day >= 21) || (month == 2 && day <= 18)) {
-       zodiacSign='4'; //Aquarius
-     } else if((month == 2 && day >= 19) || (month == 3 && day <= 20)) {
-       zodiacSign='7'; //Pisces
-     } else if((month == 3 && day >= 21) || (month == 4 && day <= 20)) {
-       zodiacSign='10'; //Aries
-     } else if((month == 4 && day >= 21) || (month == 5 && day <= 20)) {
-       zodiacSign='2';//Taurus
-     } else if((month == 5 && day >= 21) || (month == 6 && day <= 20)) {
-       zodiacSign='5'; //Gemini
-     } else if((month == 6 && day >= 22) || (month == 7 && day <= 22)) {
-       zodiacSign='8'; //Cancer
-     } else if((month == 7 && day >= 23) || (month == 8 && day <= 23)) {
-       zodiacSign='11'; //Leo
-     } else if((month == 8 && day >= 24) || (month == 9 && day <= 23)) {
-       zodiacSign='3'; //Virgo
-     } else if((month == 9 && day >= 24) || (month == 10 && day <= 23)) {
-       zodiacSign='6'; //Libra
-     } else if((month == 10 && day >= 24) || (month == 11 && day <= 22)) {
-       zodiacSign='9'; //Scorpio
-     } else if((month == 11 && day >= 23) || (month == 12 && day <= 21)) {
-       zodiacSign='12'; //Sagittarius
-     }
-     return zodiacSign;
+      zodiacSign='1'; //Capricorn
+    } else if ((month == 1 && day >= 21) || (month == 2 && day <= 18)) {
+      zodiacSign='4'; //Aquarius
+    } else if((month == 2 && day >= 19) || (month == 3 && day <= 20)) {
+      zodiacSign='7'; //Pisces
+    } else if((month == 3 && day >= 21) || (month == 4 && day <= 20)) {
+      zodiacSign='10'; //Aries
+    } else if((month == 4 && day >= 21) || (month == 5 && day <= 20)) {
+      zodiacSign='2';//Taurus
+    } else if((month == 5 && day >= 21) || (month == 6 && day <= 20)) {
+      zodiacSign='5'; //Gemini
+    } else if((month == 6 && day >= 22) || (month == 7 && day <= 22)) {
+      zodiacSign='8'; //Cancer
+    } else if((month == 7 && day >= 23) || (month == 8 && day <= 23)) {
+      zodiacSign='11'; //Leo
+    } else if((month == 8 && day >= 24) || (month == 9 && day <= 23)) {
+      zodiacSign='3'; //Virgo
+    } else if((month == 9 && day >= 24) || (month == 10 && day <= 23)) {
+      zodiacSign='6'; //Libra
+    } else if((month == 10 && day >= 24) || (month == 11 && day <= 22)) {
+      zodiacSign='9'; //Scorpio
+    } else if((month == 11 && day >= 23) || (month == 12 && day <= 21)) {
+      zodiacSign='12'; //Sagittarius
+    }
+    return zodiacSign;
   }
 
   function calculateNumerology(day,month,year){
@@ -163,65 +163,70 @@ $(document).ready(function(){
         totalSumArr[i]= parseInt(totalSumStr[i]);
       }
       totalSum=totalSumArr.reduce(function(a, b) { return a + b;}, 0);
-    }while(totalSum>9)
+    } while(totalSum>9)
+
     var numberType=totalSumArr.reduce(function(a, b) { return a + b;}, 0);
+
     return numberType;
   }
 
   function showPersonalityInfo(){
     var mbti = [
-    "INTJ-Architect",
-    "INTP-Logician",
-    "ENTJ-Commander",
-    "ENTP-Debater",
-    "INFJ-Advocate",
-    "INFP-Mediator",
-    "ENFJ-Protagonist",
-    "ENFP-Campaigner",
-    "ISTJ-Logistician",
-    "ISFJ-Defender",
-    "ESTJ-Executive",
-    "ESFJ-Consul",
-    "ISTP-Virtuoso",
-    "ISFP-Adventurer",
-    "ESTP-Entrepreneur",
-    "ESFP-Entertainer"];
-  $("#mbti").autocomplete({
-        source: mbti
+      "INTJ-Architect",
+      "INTP-Logician",
+      "ENTJ-Commander",
+      "ENTP-Debater",
+      "INFJ-Advocate",
+      "INFP-Mediator",
+      "ENFJ-Protagonist",
+      "ENFP-Campaigner",
+      "ISTJ-Logistician",
+      "ISFJ-Defender",
+      "ESTJ-Executive",
+      "ESFJ-Consul",
+      "ISTP-Virtuoso",
+      "ISFP-Adventurer",
+      "ESTP-Entrepreneur",
+      "ESFP-Entertainer"
+    ];
+    $("#mbti").autocomplete({
+      source: mbti
     });
 
-  var horoscope = [
-    "Capricorn",
-    "Taurus",
-    "Virgo",
-    "Aquarius",
-    "Gemini",
-    "Libra",
-    "Pisces",
-    "Cancer",
-    "Scorpio",
-    "Aries",
-    "Leo",
-    "Sagittarius"];
-  $("#zodiac").autocomplete({
-        source: horoscope
+    var horoscope = [
+      "Capricorn",
+      "Taurus",
+      "Virgo",
+      "Aquarius",
+      "Gemini",
+      "Libra",
+      "Pisces",
+      "Cancer",
+      "Scorpio",
+      "Aries",
+      "Leo",
+      "Sagittarius"
+    ];
+    $("#zodiac").autocomplete({
+      source: horoscope
     });
 
-  var numerology = [
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9"];
+    var numerology = [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9"
+    ];
     $("#numerology").autocomplete({
         source: numerology
     });
 
-   var data={};
+    var data={};
     $.ajax({
       method: 'GET',
       url: '/personalities',
@@ -438,69 +443,29 @@ $(document).ready(function(){
     })
   }
 
-  function findSuitableUsers(){
-    var zodiac='';
-    var numerology='';
-    var mbti='';
-      $('#zodiac').on('autocompletechange change', function () {
-        zodiac=this.value;
-      }).change();
-      $('#numerology').on('autocompletechange change', function () {
-        numerology=this.value;
-      }).change();
-      $('#mbti').on('autocompletechange change', function () {
-        mbti=this.value;
-      }).change();
-
-    $.ajax({
-      method: 'GET',
-      data: {zodiac: zodiac , numerology: numerology, mbti: mbti.slice(0,4)},
-      url: '/search',
-      success:function(resp) {
-
-      console.log(resp);
-      $('.selection').hide();
-      for (var i=0; i<resp.length;i++){
-        var results='<div class="col-md-3 eachuser"><div class="row"><div class="col-md-12"><img class="user_pic" src="'+resp[i].imgURL+'"></div><div class="col-md-12 eachprofile"><li class="name">'+resp[i].name+'</li><div class="col-md-4"><img class="user_pic" src="number/number-'+resp[i].numerology+'.svg"><li>Number'+resp[i].numerology+'</li></div><div class="col-md-4"><img class="user_pic" src="horo/'+resp[i].horoscope+'.svg"><li>'+resp[i].horoscope+'</li></div><div class="col-md-4"><img class="user_pic" src="mbti/'+resp[i].mbti+'.png"><li>'+resp[i].mbti+'</li></div><button class="btn btn-success message start-conversation" data-sid="'+$.auth.user.id+'" data-rip="'+resp[i].id+'">message</button></div></div></div>';
-        $('.foundusers').append(results);
-
-      }
-
-    }
-  });
-
-
-  }
-
   function setdescription_png(mbti){
     var description='<div class="col-md-2">'+'<img class="mbti_pic" src="/MBTI/'+mbti.name+'.png"/>'+'</div>'+'<div class="col-md-6">'+'<h2>'+mbti.name+'</h2>'+'<p>'+mbti.description+'</p>'+'</div>';
-      $('.description').html('');
-      $('.description').append(description);
+    $('.description').html('');
+    $('.description').append(description);
   }
 
   function setdescription_svg_horo(horo){
     var description='<div class="col-md-2">'+'<img class="mbti_pic" src="/horo/'+horo.name+'.svg"/>'+'</div>'+'<div class="col-md-6">'+'<h2>'+horo.name+'</h2>'+'<p>'+horo.description+'</p>'+'</div>';
-      $('.description').html('');
-      $('.description').append(description);
+    $('.description').html('');
+    $('.description').append(description);
   }
 
-    function setdescription_svg_num(number){
+  function setdescription_svg_num(number){
     var description='<div class="col-md-2">'+'<img class="mbti_pic" src="/number/number-'+number.name+'.svg"/>'+'</div>'+'<div class="col-md-6">'+'<br>'+'<p>'+number.description+'</p>'+'</div>';
-      $('.description').html('');
-      $('.description').append(description);
+    $('.description').html('');
+    $('.description').append(description);
   }
 
+  function init(){
+    setWelcomePage();
+    setpage();
 
-   setWelcomePage();
+  }
 
-   Setpage();
-   $('#findusers').click(function(e){
-    e.preventDefault();
-    findSuitableUsers();
-   });
-
-
-
+  init()
 });
-
-
