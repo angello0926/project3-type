@@ -3,20 +3,12 @@ class ProfilesController < ApplicationController
     @user = User.first.user_conversation_relationships
     @recipient = User.first.recipients
     render json: {user: @user, recipients: @recipient}
+  end
 
-    # var data = {
-    #   "images": [{
-    #     "bannerImg1": "http://i.stack.imgur.com/HXS1E.png?s=32&g=1"
-    #   },
-    #   {"bannerImg1" : "http://i.stack.imgur.com/8ywqe.png?s=32&g=1"
-    #   }]
-    # };
-    # data.images.forEach( function(obj) {
-    #   var img = new Image();
-    #   img.src = obj.bannerImg1;
-    #   img.setAttribute("class", "banner-img");
-    #   img.setAttribute("alt", "effy");
-    #   document.getElementById("img-container").appendChild(img);
-    # });
+  def currentuserprofile
+    query = "users.id = ?"
+     @user = User.joins(:mbti, :horoscope, :numerology).includes(:mbti, :horoscope, :numerology).where(query, current_user.id)
+     render json: {user: @user}
+
   end
 end

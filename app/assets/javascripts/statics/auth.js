@@ -465,7 +465,6 @@ $(document).ready(function(){
   function init(){
     setWelcomePage();
     setpage();
-
   }
 
   init()
