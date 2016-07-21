@@ -72,6 +72,7 @@ $(document).ready(function(){
       $.auth.signOut();
       console.log('logout');
       setWelcomePage();
+      window.location.href = "https://project-3-type.herokuapp.com/";
     });
   }
 
