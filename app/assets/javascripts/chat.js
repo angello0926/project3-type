@@ -303,8 +303,15 @@ var ready = function() {
       }
       return cookieValue;
     }
+
+  $('.hidechat').on("click", function () {
+    $(this).parents('div').fadeOut();
+});
+
   };
 };
 
 $(document).ready(ready);
 $(document).on("page:load", ready);
+
+
