@@ -1,4 +1,4 @@
-x# encoding: UTF-8
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,7 +11,7 @@ x# encoding: UTF-8
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160719054928) do
+ActiveRecord::Schema.define(version: 20160721031724) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -91,9 +91,10 @@ ActiveRecord::Schema.define(version: 20160719054928) do
     t.integer  "birth_mm"
     t.integer  "birth_yy"
     t.string   "gender"
-    t.string   "mbti_id"
-    t.string   "numerology_id"
-    t.string   "horoscope_id"
+    t.integer  "mbti_id"
+    t.integer  "numerology_id"
+    t.integer  "horoscope_id"
+    t.string   "imgURL"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", using: :btree

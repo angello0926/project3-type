@@ -7,12 +7,8 @@ class PersonalitiesController < ApplicationController
   end
 
   def search
-    @zodiac =Horoscope.where("name=?", params[:zodiac]).first
-    @numerology =Numerology.where("name=?", params[:numerology]).first
-    @mbti = Mbti.where("name=?", params[:mbti]).first
-    @users=User.where("mbti_id = ? OR horoscope_id = ? OR numerology_id=? ",@mbti.id.to_s,@zodiac.id.to_s,@numerology.id.to_s)
-
-
-    render json: { users: @users }
+    query = "mbtis.name = ? OR horoscopes.name = ? OR numerologies.name = ?"
+    @users = User.joins(:mbti, :horoscope, :numerology).includes(:mbti, :horoscope, :numerology).where(query, params[:mbti], params[:zodiac], params[:numerology])
   end
 end
+
