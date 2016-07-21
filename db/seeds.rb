@@ -13,7 +13,7 @@ Mbti.create(name:'intj', description:'Imaginative and strategic thinkers, with a
 
 Mbti.create(name:'intp', description:'Innovative inventors with an unquenchable thirst for knowledge.', strength:'laid back, not demanding, imaginative and creative', weakness:'explosive, distrusting of others, critical of others')
 
-Mbti.create(name:'entjh', description:'Bold, imaginative and strong-willed leaders, always finding a way – or making one.', strength:'excellent with money, takes criticism well, goal setting', weakness:'controlling and intimidating, appears angry, impulsive')
+Mbti.create(name:'entj', description:'Bold, imaginative and strong-willed leaders, always finding a way – or making one.', strength:'excellent with money, takes criticism well, goal setting', weakness:'controlling and intimidating, appears angry, impulsive')
 
 Mbti.create(name:'entp', description:'Smart and curious thinkers who cannot resist an intellectual challenge.', strength:'good communicator, laid back, generating ideas', weakness:'poor follow up skills, easily bored, argumentative')
 

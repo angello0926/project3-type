@@ -444,13 +444,13 @@ $(document).ready(function(){
   }
 
   function setdescription_png(mbti){
-    var description='<div class="col-md-2">'+'<img class="mbti_pic" src="/MBTI/'+mbti.name+'.png"/>'+'</div>'+'<div class="col-md-6">'+'<h2>'+mbti.name+'</h2>'+'<p>'+mbti.description+'</p>'+'</div>';
+    var description='<div class="col-md-2">'+'<img class="mbti_pic" src="/MBTI/'+mbti.name+'.png"/>'+'</div>'+'<div class="col-md-6">'+'<h2 class="capitalise">'+mbti.name+'</h2>'+'<p>'+mbti.description+'</p>'+'</div>';
     $('.description').html('');
     $('.description').append(description);
   }
 
   function setdescription_svg_horo(horo){
-    var description='<div class="col-md-2">'+'<img class="mbti_pic" src="/horo/'+horo.name+'.svg"/>'+'</div>'+'<div class="col-md-6">'+'<h2>'+horo.name+'</h2>'+'<p>'+horo.description+'</p>'+'</div>';
+    var description='<div class="col-md-2">'+'<img class="mbti_pic" src="/horo/'+horo.name+'.svg"/>'+'</div>'+'<div class="col-md-6">'+'<h2 class="capitalise">'+horo.name+'</h2>'+'<p>'+horo.description+'</p>'+'</div>';
     $('.description').html('');
     $('.description').append(description);
   }

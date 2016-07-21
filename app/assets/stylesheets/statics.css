@@ -125,3 +125,8 @@ li{
    font-size:  40px;
    text-align: center;
 }
+
+.capitalise{
+  text-transform: uppercase;
+
+}
