@@ -39,13 +39,16 @@ gem 'rack-cors', :require => 'rack/cors'
 gem 'devise_token_auth'
 gem 'omniauth'
 gem 'bower'
-gem 'rails_12factor', group: :production
 gem 'aws-sdk-v1'
 gem 'paperclip', '~> 4.3'
 
 
 
 group :development, :test do
+  # Replaces the standard Rails error page
+  gem 'better_errors'
+  # Grab bindings from higher up the call stack and evaluate code
+  gem 'binding_of_caller'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'pry-rails'
@@ -60,7 +63,6 @@ group :development do
 end
 
 group :production do
-  gem 'pg'
   gem 'rails_12factor'
 end
 
