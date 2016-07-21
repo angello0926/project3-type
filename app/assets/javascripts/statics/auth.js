@@ -460,9 +460,8 @@ $(document).ready(function(){
 
       console.log(resp);
       $('.selection').hide();
-
-      for (var i=0; i<resp.users.length;i++){
-        var results='<li>Name:'+resp.users[i].name+'</li>';
+      for (var i=0; i<resp.length;i++){
+        var results='<div class="col-md-3 eachuser"><div class="row"><div class="col-md-12"><img class="user_pic" src="'+resp[i].imgURL+'"></div><div class="col-md-12 eachprofile"><li class="name">'+resp[i].name+'</li><div class="col-md-4"><img class="user_pic" src="number/number-'+resp[i].numerology+'.svg"><li>Number'+resp[i].numerology+'</li></div><div class="col-md-4"><img class="user_pic" src="horo/'+resp[i].horoscope+'.svg"><li>'+resp[i].horoscope+'</li></div><div class="col-md-4"><img class="user_pic" src="mbti/'+resp[i].mbti+'.png"><li>'+resp[i].mbti+'</li></div><button class="btn btn-success message start-conversation" data-sid="'+$.auth.user.id+'" data-rip="'+resp[i].id+'">message</button></div></div></div>';
         $('.foundusers').append(results);
 
       }

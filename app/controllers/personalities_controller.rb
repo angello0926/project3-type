@@ -12,10 +12,3 @@ class PersonalitiesController < ApplicationController
   end
 end
 
-# => "ENFP"
-# [10] pry(main)> Numerology.find(7).name
-#   Numerology Load (0.3ms)  SELECT  "numerologies".* FROM "numerologies" WHERE "numerologies"."id" = $1 LIMIT 1  [["id", 7]]
-# => "7"
-# [11] pry(main)> Horoscope.find(7).name
-#   Horoscope Load (0.3ms)  SELECT  "horoscopes".* FROM "horoscopes" WHERE "horoscopes"."id" = $1 LIMIT 1  [["id", 7]]
-# => "Pisces"
