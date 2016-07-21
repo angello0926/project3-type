@@ -66,3 +66,31 @@ label{
   color:#1C907F;
 }
 
+.selection{
+  margin-top: 50px;
+}
+
+.mbti_pic{
+  width:100%;
+
+}
+
+.descriptiondiv{
+  margin-top: 30px;
+  font-family: "Arial Black"
+}
+
+.search_criteria{
+  background-color:#1C907F;
+  color:white;
+  outline: none;
+  padding:5px;
+  border-radius: 5px;
+  font-family: "helvetica";
+  border: none;
+}
+
+
+::-webkit-input-placeholder {
+   color: white;
+}

@@ -8,5 +8,7 @@ class User < ActiveRecord::Base
 belongs_to :numerology
 belongs_to :mbti
 belongs_to :horoscope
+has_many :messages
+has_many :chatrooms, through: :messages
 
 end
