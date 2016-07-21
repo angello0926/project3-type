@@ -94,6 +94,7 @@ ActiveRecord::Schema.define(version: 20160721031724) do
     t.integer  "mbti_id"
     t.integer  "numerology_id"
     t.integer  "horoscope_id"
+    t.string   "image_url"
     t.string   "imgURL"
   end
 
