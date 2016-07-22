@@ -31,6 +31,28 @@ User.create(email: "Max@test.com", name: 'Max', mbti_id: '14', numerology_id: '8
 User.create(email: "Derek@test.com", name: 'Derek', mbti_id: '8', numerology_id: '9', horoscope_id: '10', password: "12345678", password_confirmation: "12345678", imgURL:  'avatars/40.svg')
 
 
+User.create(email: "Tony@test.com", name: 'Tony', mbti_id: '8', numerology_id: '6', horoscope_id: '4', password: "12345678", password_confirmation: "12345678", imgURL:  'avatars/36.svg')
+User.create(email: "Peter@test.com", name: 'Peter', mbti_id: '7', numerology_id: '3', horoscope_id: '6', password: "12345678", password_confirmation: "12345678", imgURL:  'avatars/27.svg')
+User.create(email: "Bruce@test.com", name: 'Bruce', mbti_id: '6', numerology_id: '2', horoscope_id: '11', password: "12345678", password_confirmation: "12345678", imgURL:  'avatars/48.svg')
+User.create(email: "Norman@test.com", name: 'Norman', mbti_id: '14', numerology_id: '5', horoscope_id: '2', password: "12345678", password_confirmation: "12345678", imgURL:  'avatars/47.svg')
+User.create(email: "Kobe@test.com", name: 'Kobe', mbti_id: '15', numerology_id: '5', horoscope_id: '4', password: "12345678", password_confirmation: "12345678", imgURL:  'avatars/26.svg')
+User.create(email: "Owen@test.com", name: 'Owen', mbti_id: '14', numerology_id: '2', horoscope_id: '7', password: "12345678", password_confirmation: "12345678", imgURL:  'avatars/14.svg')
+User.create(email: "Willy@test.com", name: 'Willy', mbti_id: '5', numerology_id: '4', horoscope_id: '5', password: "12345678", password_confirmation: "12345678", imgURL:  'avatars/10.svg')
+User.create(email: "Bobby@test.com", name: 'Bobby', mbti_id: '15', numerology_id: '4', horoscope_id: '8', password: "12345678", password_confirmation: "12345678", imgURL:  'avatars/30.svg')
+User.create(email: "Arteezy@test.com", name: 'Arteezy', mbti_id: '10', numerology_id: '7', horoscope_id: '5', password: "12345678", password_confirmation: "12345678", imgURL:  'avatars/20.svg')
+User.create(email: "Jacky@test.com", name: 'Jacky', mbti_id: '13', numerology_id: '3', horoscope_id: '1', password: "12345678", password_confirmation: "12345678", imgURL:  'avatars/10.svg')
+User.create(email: "Ongpin@test.com", name: 'Ongpin', mbti_id: '10', numerology_id: '5', horoscope_id: '4', password: "12345678", password_confirmation: "12345678", imgURL:  'avatars/44.svg')
+User.create(email: "Dendi@test.com", name: 'Dendi', mbti_id: '11', numerology_id: '4', horoscope_id: '10', password: "12345678", password_confirmation: "12345678", imgURL:  'avatars/7.svg')
+User.create(email: "Clinton@test.com", name: 'Clinton', mbti_id: '8', numerology_id: '1', horoscope_id: '4', password: "12345678", password_confirmation: "12345678", imgURL:  'avatars/4.svg')
+User.create(email: "Jenny@test.com", name: 'Jenny', mbti_id: '8', numerology_id: '9', horoscope_id: '2', password: "12345678", password_confirmation: "12345678", imgURL:  'avatars/32.svg')
+User.create(email: "Joy@test.com", name: 'Joy', mbti_id: '1', numerology_id: '7', horoscope_id: '10', password: "12345678", password_confirmation: "12345678", imgURL:  'avatars/40.svg')
+User.create(email: "Galgadot@test.com", name: 'Galgadot', mbti_id: '8', numerology_id: '9', horoscope_id: '10', password: "12345678", password_confirmation: "12345678", imgURL:  'avatars/42.svg')
+User.create(email: "Rainbow@test.com", name: 'Rainbow', mbti_id: '2', numerology_id: '6', horoscope_id: '11', password: "12345678", password_confirmation: "12345678", imgURL:  'avatars/28.svg')
+User.create(email: "May@test.com", name: 'May', mbti_id: '1', numerology_id: '4', horoscope_id: '1', password: "12345678", password_confirmation: "12345678", imgURL:  'avatars/10.svg')
+User.create(email: "Bubble@test.com", name: 'Bubble', mbti_id: '5', numerology_id: '9', horoscope_id: '12', password: "12345678", password_confirmation: "12345678", imgURL:  'avatars/44.svg')
+User.create(email: "Lori@test.com", name: 'Lori', mbti_id: '11', numerology_id: '1', horoscope_id: '1', password: "12345678", password_confirmation: "12345678", imgURL:  'avatars/13.svg')
+
+
 Mbti.create(name:'intj', description:'Imaginative and strategic thinkers, with a plan for everything.', strength:'highly intelligent, honors commitments, independent', weakness:'unwilling to take blame, arrogant, insensitive')
 
 Mbti.create(name:'intp', description:'Innovative inventors with an unquenchable thirst for knowledge.', strength:'laid back, not demanding, imaginative and creative', weakness:'explosive, distrusting of others, critical of others')
