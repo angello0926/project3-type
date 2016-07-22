@@ -99,6 +99,7 @@ label{
 
 .user_pic{
   width: 100%;
+
 }
 
 .eachprofile{
@@ -139,4 +140,8 @@ li{
 
 button{
   margin-top: 10px;
+}
+
+.history{
+  padding: 20px;
 }

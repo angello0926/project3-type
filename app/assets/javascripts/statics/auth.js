@@ -7,7 +7,7 @@ $(document).ready(function(){
     $('.selection').hide();
     loginmodalshow();
     Signup ();
-    $('.profile').hide();
+    $('.profilediv').hide();
 
   }
 
@@ -31,7 +31,7 @@ $(document).ready(function(){
     logout();
     showPersonalityInfo();
     profile();
-    $('.profile').hide();
+    $('.profilediv').hide();
   }
 
   function loginmodalshow(){
@@ -73,21 +73,61 @@ $(document).ready(function(){
   }
 
   function profile(){
-
-     $('#profile').on('click', function(){
-
-       $.ajax({
+    $('#profile').on('click', function(e){
+      e.preventDefault();
+      $.ajax({
       method: 'GET',
       url: '/profile',
       success:function(resp) {
       console.log(resp);
-       $('.profile').show();
+      $('.selection').hide();
+      $('.results').hide();
+       $('.profilediv').show();
+        var info= '<h1>My Profile</h1>'+
+        '<div class="col-xs-6 col-sm-4 col-md-12 eachuser">'+
+        '<div class="row">'+
+        '<div class="col-xs-12">'+
+        '<img class="user_pic" src="'+ $.auth.user.imgURL+'"></div>'+
+        '<div class="col-xs-12 eachprofile">'+
+        '<li class="name">'+$.auth.user.name+'</li>'+
+        '<div class="col-xs-4">'+
+        '<img class="user_pic" src="number/number-'+ resp.numerology +'.svg">'+
+        '<li class="capitalise">Number'+ resp.numerology +'</li>'+
+        '</div><div class="col-xs-4"><img class="user_pic" src="horo/'+ resp.horoscope+'.svg">'+
+        '<li class="capitalise">'+ resp.horoscope+ '</li>'+
+        '</div><div class="col-xs-4">'+
+        '<img class="user_pic" src="mbti/'+resp.mbti+'.png">'+
+        '<li class="capitalise">'+resp.mbti+'</li></div>';
+        $('.profile').html('');
+        $('.profile').prepend(info);
 
       }
     });
-
     });
 
+    $('#showhistory').on('click', function(e){
+      e.preventDefault();
+      $.ajax({
+      method: 'GET',
+      url: '/showconversation',
+      success:function(resp) {
+        console.log(resp);
+        $('.selection').hide();
+        $('.results').hide();
+        $('.profilediv').show();
+          $('.history').html('');
+       for (var i=0; i<resp.user.length; i++){
+              var history=
+        '<div class="col-md-4">'+
+        '<img class="user_pic" src="'+ resp.user[i].imgURL+'">'+'<li>Name: <span>'+
+        resp.user[i].name+
+        '</span></li>'+'</div>';
+        //'<button class="btn btn-success message start-conversation" data-sid="'+$.auth.user.id+'" data-rip="'+resp.user[i].id+'">message</button>'+
+        $('.history').append(history);
+       }
+      }
+      });
+    });
   }
 
   function logout (){
@@ -126,6 +166,8 @@ $(document).ready(function(){
   function setpage (){
     PubSub.subscribe('auth.validation.success', function(ev, user) {
       afterLoggedIn();
+       profile();
+
     });
   }
 
