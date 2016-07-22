@@ -1,14 +1,14 @@
 class ProfilesController < ApplicationController
-  def profile
+  def conversation
     @user = User.first.user_conversation_relationships
     @recipient = User.first.recipients
     render json: {user: @user, recipients: @recipient}
   end
 
-  def currentuserprofile
+  def profile
     query = "users.id = ?"
-     @user = User.joins(:mbti, :horoscope, :numerology).includes(:mbti, :horoscope, :numerology).where(query, current_user.id)
-     render json: {user: @user}
+     @mbti = Mbti.find(current_user.mbti_id).name
+     render json: {mbti: @mbti}
 
   end
 end

@@ -15,7 +15,7 @@
   margin-top: 100px;
 }
 
-.btn:hover{
+.login,.signup:hover{
   background-color:#FFCF04;
   color: white;
 }
@@ -89,6 +89,7 @@ label{
   border-radius: 5px;
   font-family: "helvetica";
   border: none;
+
 }
 
 
@@ -128,5 +129,14 @@ li{
 
 .capitalise{
   text-transform: uppercase;
+}
 
+#anyone{
+   background-color:#FFCF04;
+  color: white;
+  border: 1px solid #FFCF04;
+}
+
+button{
+  margin-top: 10px;
 }

@@ -1,20 +1,27 @@
 <div class="selection">
   <div class="row">
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-sm-9 col-sm-offset-3 col-xs-10 col-xs-offset-1 col-md-7 col-md-offset-3">
       <div class="instruction">
         <h2>The person you want to talk to</h2>
       </div>
 
       <form action="/secret">
+      <div class="row">
         <input class="search_criteria" name="mbti" type="text" id="mbti" placeholder="MBTI-Type e.g. INFP" />
         <input class="search_criteria" name="zodiac" type="text" id="zodiac" placeholder="Zodiac e.g. Libra" />
         <input class="search_criteria" name="numerology" type="text" id="numerology" placeholder="Numerology e.g. 7"/>
+      </div>
+      <div class="row">
+       <div class="col-xs-4 col-xs-offset-2">
         <button class="btn btn-success" id="findusers">Find</button>
+        <a href="/secret"><button class="btn btn-success" id="anyone">Anyone</button></a>
+        </div>
+      <row>
       </form>
     </div>
   </div>
   <div class="row">
-    <div class="col-md-8 col-md-offset-3 descriptiondiv ">
+    <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-3 descriptiondiv ">
       <div class='description row'>
       </div>
     </div>
